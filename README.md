@@ -237,11 +237,12 @@ Including an example of how to use your role (for instance, with variables passe
          - { name: testu1 }
          - { name: testu2, state:present }
          - { name: testu3, state:absent }
-      clickhouse_shards:
-        your_shard_name:
-          - { host: "db_host_1", port: 9000 }
-          - { host: "db_host_2", port: 9000 }
-          - { host: "db_host_3", port: 9000 }
+      clickhouse_clusters:
+        - your_cluster_name:
+            your_shard_name:
+              - { host: "db_host_1", port: 9000 }
+              - { host: "db_host_2", port: 9000 }
+              - { host: "db_host_3", port: 9000 }
       clickhouse_zookeeper_nodes:
         - { host: "zoo_host_1", port: 2181 }
         - { host: "zoo_host_2", port: 2181 }
